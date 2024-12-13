@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-color: #002334;
+  --secondary-color: #00E1B7;
+  --background-color: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  color: var(--primary-color);
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#00E1B7];
+}
+
+
+@layer components {
+  .textGray {
+    @apply text-[#758186];
+  }
+  
+  .alignElement {
+    @apply mx-auto 2xl:max-w-full lg:max-w-7xl lg:px-7 px-3;
+  }
+  
+  /* CUSTOM DOT STYLING */
+  .slick-dots li button {
+    @apply rounded-full bg-white hover:bg-[#00E1B7] transition duration-300;
+  }
+  
+  .slick-dots li.slick-active button::before {
+    content: none;
+  }
+
+  .slick-dots li.slick-active button {
+    @apply bg-[#00E1B7] w-2 h-2;
+  }
+
+  .audienceBg {
+    background-image: url("../assets/images/audiences.svg");
+  }
+
+  .questionBg {
+    background-image: url("../assets/images/questions.svg")
+  }
+
+  .button {
+    @apply bg-[#00E1B7] hover:bg-[#04FFD0]  text-[#002334] md:py-4 py-2 md:px-8 px-4 rounded-[80px] font-semibold;
+  }
+}
